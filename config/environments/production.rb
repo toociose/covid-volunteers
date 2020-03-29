@@ -119,8 +119,8 @@ Rails.application.configure do
 
   Rails.application.config.middleware.use ExceptionNotification::Rack,
   email: {
-    email_prefix: '[HelpWithCovid] ',
-    sender_address: %{"Help With Covid" <no-reply@helpwithcovid.com>},
+    email_prefix: '[HelpWithCovidNewHaven] ',
+    sender_address: %{"Help With Covid New Haven" <no-reply@helpwithcovid.com>},
     exception_recipients: %w{radu.spineanu@gmail.com}
   }
 end
