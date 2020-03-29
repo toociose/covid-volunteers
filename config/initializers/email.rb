@@ -1,1 +1,2 @@
-HWC_EMAIL = "newhavenpandemic@gmail.com"
+HWC_EMAIL = ENV['SMTP_USERNAME']
+HWC_NOREPLY = ENV['SMTP_NOREPLY']
