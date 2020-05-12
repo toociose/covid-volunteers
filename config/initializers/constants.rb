@@ -1,22 +1,22 @@
-ALL_SKILLS = [ 
+ALL_SKILLS = [
   'Access to car',
-  'ArcGIS', 
-  'Arts and crafts', 
-  'BHL (biohazard level) lab certificate', 
-  'Childcare', 
-  'Communications', 
-  'CPR certificate', 
-  'Culinary skills and access to kitchen', 
-  'Database architecture', 
-  'Driver\'s license', 
-  'Door-to-door canvassing', 
-  'EPIC access', 
-  'Grant writing', 
-  'IRB experience', 
+  'ArcGIS',
+  'Arts and crafts',
+  'BHL (biohazard level) lab certificate',
+  'Childcare',
+  'Communications',
+  'CPR certificate',
+  'Culinary skills and access to kitchen',
+  'Database architecture',
+  'Driver\'s license',
+  'Door-to-door canvassing',
+  'EPIC access',
+  'Grant writing',
+  'IRB experience',
   'Languages other than English',
   'Logistics and supply chain management',
-  'Phlebotomy', 
-  'Phone bank', 
+  'Phlebotomy',
+  'Phone bank',
   'Software programming',
   'Statistical analysis',
   'Survey design',
@@ -30,23 +30,23 @@ ALL_NUMBER_OF_VOLUNTEERS = [ '1-10', '10-50', '50-100', '100+' ]
 ALL_LEVELS_OF_URGENCY = [ 'Extremely urgent', 'Very urgent', 'Moderately urgent', 'Somewhat urgent', 'Not urgent' ]
 ALL_LEVELS_OF_EXPOSURE = [ 'I', 'II', 'III', 'IV', 'V' ]
 REMOTE_LOCATION = 'Remote'
-CITY_NAME = 'New Haven'
-STATE_NAME = 'Connecticut'
+CITY_NAME = 'Athens'
+STATE_NAME = 'Georgia'
 ALL_LOCATIONS = [ "#{CITY_NAME} (on site)", "Other #{STATE_NAME} locales (on site)", REMOTE_LOCATION ]
 
 ALL_PROJECT_TYPES = [
   'Contact tracing',
   'Reduce spread',
-  'Healthcare', 
-  'Medical equipment', 
-  'Treatment and vaccine R&D', 
+  'Healthcare',
+  'Medical equipment',
+  'Treatment and vaccine R&D',
   'Tutoring',
   'Childcare',
   'Delivery',
   'Coordination',
   'Supply chain and logistics',
-  'First responder', 
-  'Counseling/companionship', 
+  'First responder',
+  'Counseling/companionship',
   'Food preparation',
   'Communications',
   'Legal',
