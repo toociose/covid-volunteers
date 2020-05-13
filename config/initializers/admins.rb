@@ -1,4 +1,3 @@
 ADMINS = [
-  'mark.santolucito@yale.edu',
-  'tiffany.chan@yale.edu'
+  'camdenrogers24@gmail.com'
 ]
