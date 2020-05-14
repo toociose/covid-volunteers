@@ -34,6 +34,7 @@ CITY_NAME = 'Athens'
 STATE_NAME = 'Georgia'
 ALL_LOCATIONS = [ "#{CITY_NAME} (on site)", "Other #{STATE_NAME} locales (on site)", REMOTE_LOCATION ]
 DOMAIN_NAME = 'AthensHelpWithCovid.com'
+AFFILIATE_EMAIL = 'athenshelpwithcovid@gmail.com'
 ALL_PROJECT_TYPES = [
   'Contact tracing',
   'Reduce spread',
