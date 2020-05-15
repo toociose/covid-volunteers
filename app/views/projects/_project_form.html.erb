@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="organization" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
       Organization<span class="text-red-500">*</span><br/>
@@ -48,7 +48,7 @@
               <% ALL_LEVELS_OF_URGENCY.each do |level_of_urgency| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :level_of_urgency, level_of_urgency, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"} %>
+                    <%= f.radio_button :level_of_urgency, level_of_urgency, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out"} %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">
@@ -126,7 +126,7 @@
               <% ALL_SKILLS.each do |skill| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                  <%= f.check_box :skill_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"}, skill, nil %>
+                  <%= f.check_box :skill_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-red-600 transition duration-150 ease-in-out"}, skill, nil %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label for="project_skill_list_<%= skill.downcase.gsub(' & ', '__').gsub(' ', '_') %>" class="font-medium text-gray-700">
@@ -156,7 +156,7 @@
               <% ALL_PROJECT_TYPES.each do |project_type| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                  <%= f.check_box :project_type_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"}, project_type, nil %>
+                  <%= f.check_box :project_type_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-red-600 transition duration-150 ease-in-out"}, project_type, nil %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label for="project_project_type_list_<%= project_type.downcase.gsub('&', '__').gsub(' ', '_') %>" class="font-medium text-gray-700">
@@ -186,7 +186,7 @@
               <% ALL_NUMBER_OF_VOLUNTEERS.each do |number_of_volunteers| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :number_of_volunteers, number_of_volunteers, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                    <%= f.radio_button :number_of_volunteers, number_of_volunteers, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out", required: true} %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">
@@ -216,7 +216,7 @@
               <% ALL_LEVELS_OF_EXPOSURE.each do |level_of_exposure| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :level_of_exposure, level_of_exposure, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                    <%= f.radio_button :level_of_exposure, level_of_exposure, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out", required: true} %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">
@@ -287,7 +287,7 @@
             <div class="max-w-lg">
                 <div class="relative flex items-start">
                     <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :background_screening_required, true, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                    <%= f.radio_button :background_screening_required, true, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out", required: true} %>
                     </div>
                     <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">
@@ -297,7 +297,7 @@
                 </div>
                 <div class="relative flex items-start">
                     <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :background_screening_required, false, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                    <%= f.radio_button :background_screening_required, false, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out", required: true} %>
                     </div>
                     <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">
@@ -328,7 +328,7 @@
               <% ALL_LOCATIONS.each do |location| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :location, location, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                    <%= f.radio_button :location, location, { :multiple => false, class:  "form-radio h-4 w-4 text-red-600 transition duration-150 ease-in-out", required: true} %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">

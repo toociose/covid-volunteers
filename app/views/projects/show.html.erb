@@ -10,7 +10,7 @@
         </h3>
         <% if current_user && @project.user == current_user %>
           <!-- <p class="mt-1 text-sm leading-5 text-gray-500">
-            Use <%= link_to "HWC's Discord", "https://discord.gg/875AhXS", class: "text-indigo-500", target: "_blank" %> to manage your project communication.
+            Use <%= link_to "HWC's Discord", "https://discord.gg/875AhXS", class: "text-red-500", target: "_blank" %> to manage your project communication.
           </p> -->
         <% end %>
       </div>
@@ -109,7 +109,7 @@
             <% else %>
               <%= link_to toggle_volunteer_project_path(@project), method: :post, data: { confirm: "Are you sure you want to volunteer? The hiring manager will be alerted." } do %>
                 <span class="ml-3 inline-flex rounded-md shadow-sm mt-4">
-                  <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700">
+                  <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline-red focus:border-red-700 active:bg-red-700">
                     <svg class="-ml-1 mr-2 h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
                     </svg>
@@ -169,8 +169,8 @@
           </p>
         </div>
         <div class="flex justify-between mt-3 text-sm leading-5">
-          <%= mail_to HWC_EMAIL, "Tell about it via email &rarr;".html_safe, subject: "[Highlight request] #{@project.name} ", encoding: "hex", target: "_blank", class: "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150" %>
-          <%= link_to "javascript:void(0)", id: "disable_highlight_projects_alert", class: "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150" do %>
+          <%= mail_to HWC_EMAIL, "Tell about it via email &rarr;".html_safe, subject: "[Highlight request] #{@project.name} ", encoding: "hex", target: "_blank", class: "font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline transition ease-in-out duration-150" %>
+          <%= link_to "javascript:void(0)", id: "disable_highlight_projects_alert", class: "font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline transition ease-in-out duration-150" do %>
             Don't show this again
           <% end %>
         </div>
@@ -187,7 +187,7 @@
               --- REMOVED POSTING ---
             </p>
           </div>
-          
+
           <div class="mt-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:px-6 sm:py-5">
             <dt class="text-sm leading-5 font-medium text-gray-500">
               Who did you recruit for this position?
@@ -202,7 +202,7 @@
               </dd>
             <% end %>
           </div>
-          
+
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:pt-5 sm:pb-2 mb-3">
             <dt class="text-sm leading-5 font-medium text-gray-500">
               Was this platform helpful?
@@ -241,7 +241,7 @@
             </dd>
           </div>
         <% end %>
-      
+
         <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:pt-5 sm:pb-2">
           <dt class="text-sm leading-5 font-medium text-gray-500">
             Description
@@ -256,7 +256,7 @@
             Who is already working on this
           </dt>
           <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-            <%= simple_format Rinku.auto_link(sanitize(@project.participants), :all, 'class="text-indigo-500"'), class: 'mb-3' %>
+            <%= simple_format Rinku.auto_link(sanitize(@project.participants), :all, 'class="text-red-500"'), class: 'mb-3' %>
           </dd>
         </div> -->
         <% if @project.progress.present? %>
@@ -265,7 +265,7 @@
               How far along it is
             </dt>
             <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-              <%= simple_format Rinku.auto_link(sanitize(@project.progress), :all, 'class="text-indigo-500"'), class: 'mb-3' %>
+              <%= simple_format Rinku.auto_link(sanitize(@project.progress), :all, 'class="text-red-500"'), class: 'mb-3' %>
             </dd>
           </div> -->
         <% end %>
@@ -275,7 +275,7 @@
               Demo, mockups, or documentation
             </dt>
             <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-              <%= simple_format Rinku.auto_link(sanitize(@project.docs_and_demo), :all, 'class="text-indigo-500"'), class: 'mb-3' %>
+              <%= simple_format Rinku.auto_link(sanitize(@project.docs_and_demo), :all, 'class="text-red-500"'), class: 'mb-3' %>
             </dd>
           </div> -->
         <% end %>
@@ -330,7 +330,7 @@
         <% if @project.level_of_exposure.present? %>
           <div class="mt-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:px-6 sm:py-5">
             <dt class="text-sm leading-5 font-medium text-gray-500">
-              Level of Exposure 
+              Level of Exposure
             </dt>
             <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
               Level <%= @project.level_of_exposure %>
@@ -361,7 +361,7 @@
               How to get in touch
             </dt>
             <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-              <%= Rinku.auto_link(sanitize(@project.contact), :all, 'class="text-indigo-500"').html_safe %>
+              <%= Rinku.auto_link(sanitize(@project.contact), :all, 'class="text-red-500"').html_safe %>
             </dd>
           </div>
         <% end %>
@@ -413,8 +413,8 @@
         This project has been removed.
       </h2>
       <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
-        If you believe this is a mistake, please contact the project owner or email us 
-        at <a href="mailto:newhavenpandemic@gmail.com" class="text-indigo-500">newhavenpandemic@gmail.com</a>.
+        If you believe this is a mistake, please contact the project owner or email us
+        at <a href="mailto:newhavenpandemic@gmail.com" class="text-red-500">newhavenpandemic@gmail.com</a>.
       </p>
     </div>
   </div>
