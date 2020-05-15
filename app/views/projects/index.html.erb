@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="ml-4 mt-4 flex-shrink-0">
             <span class="inline-flex rounded-md shadow-sm">
-                <a href="https://www.facebook.com/New-Haven-Help-with-Covid-19-100919271572189" class="fa fa-facebook"></a>
-                <a href="https://twitter.com/NHhelpwithCOVID" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/HelpwithCOVID" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/helpwithcovid" class="fa fa-twitter"></a>
                 <a href="http://eepurl.com/g3hEa5" class="fa fa-envelope"></a>
             </span>
         </div>
@@ -29,19 +29,19 @@
             </h3>
             <% if current_user.blank? %>
             <p class="mt-1 text-sm leading-5 text-gray-500"><b>
-                    <%= link_to 'Sign up', new_user_registration_path, class: 'text-indigo-500' %> to volunteer.
+                    <%= link_to 'Sign up', new_user_registration_path, class: 'text-red-500' %> to volunteer.
                 </b></p>
             <% elsif !current_user.has_complete_profile? %>
             <p class="mt-1 text-sm leading-5 text-gray-500">
-                <%= link_to 'Fill out your profile', edit_user_registration_path, class: 'text-indigo-500' %> to volunteer. Then, look below for projects. You can also make yourself visible in <%= link_to 'the database', volunteers_path, class: 'text-indigo-500' %>, so that organizers can reach out to you.
+                <%= link_to 'Fill out your profile', edit_user_registration_path, class: 'text-red-500' %> to volunteer. Then, look below for projects. You can also make yourself visible in <%= link_to 'the database', volunteers_path, class: 'text-red-500' %>, so that organizers can reach out to you.
             </p>
             <% elsif current_user.has_complete_profile? %>
             <p class="mt-1 text-sm leading-5 text-gray-500">
-                Look below for projects that need volunteers with your skills. You can also make yourself visible in <%= link_to 'the database', volunteers_path, class: 'text-indigo-500' %>, so that organizers can reach out to you.
+                Look below for projects that need volunteers with your skills. You can also make yourself visible in <%= link_to 'the database', volunteers_path, class: 'text-red-500' %>, so that organizers can reach out to you.
             </p>
             <% end %>
-            <p class="mt-1 text-sm leading-5 text-green-500">
-                Please follow us on <a href="https://www.facebook.com/New-Haven-Help-with-Covid-19-100919271572189" class="text-indigo-500" target="_blank">Facebook</a> or <a href="https://twitter.com/NHhelpwithCOVID" class="text-indigo-500" target="_blank">Twitter</a> or sign up for our regular <a href="http://eepurl.com/g3hEa5" class="text-indigo-500" target="_blank">newsletter</a> to receive updates on the latest openings. Thank you!</p>
+            <p class="mt-1 text-sm leading-5 text-gray-500">
+                Please follow us on <a href="https://www.facebook.com/HelpwithCOVID" class="text-red-500" target="_blank">Facebook</a> or <a href="https://twitter.com/helpwithcovid" class="text-red-500" target="_blank">Twitter</a> or sign up for our regular <a href="http://eepurl.com/g3hEa5" class="text-red-500" target="_blank">newsletter</a> to receive updates on the latest openings. Thank you!</p>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@
         <div class="ml-4 mt-4 flex-shrink-0">
             <span class="inline-flex rounded-md shadow-sm">
                 <%= link_to new_project_path do %>
-                <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700">
+                <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700">
                     Create volunteer position
                 </button>
                 <% end %>

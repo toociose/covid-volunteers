@@ -2,9 +2,9 @@ module ApplicationHelper
   def nav_link_active_class(variant = 'DESKTOP')
     case variant
     when 'DESKTOP'
-      'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out ml-8 text-center'
+      'inline-flex items-center px-1 pt-1 border-b-2 border-red-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-red-700 transition duration-150 ease-in-out ml-8 text-center'
     when 'MOBILE'
-      'block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out'
+      'block pl-3 pr-4 py-2 border-l-4 border-red-500 text-base font-medium text-red-700 bg-red-50 focus:outline-none focus:text-red-800 focus:bg-red-100 focus:border-red-700 transition duration-150 ease-in-out'
     end
   end
 
@@ -84,8 +84,8 @@ module ApplicationHelper
       classes = 'bg-blue-100 text-blue-800'
       classes += ' bg-blue-300' if applied
     else
-      classes = 'bg-indigo-100 text-indigo-800'
-      classes += ' bg-indigo-300' if applied
+      classes = 'bg-gray-300 text-black'
+      classes += ' bg-red-300' if applied
     end
 
     render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title}
@@ -131,7 +131,7 @@ module ApplicationHelper
     params_array.reject(&:nil?).join('&')
   end
 
-  def skill_badges(items, limit: nil, color: 'indigo', title: '', model: '', filter_by: '')
+  def skill_badges(items, limit: nil, color: 'red', title: '', model: '', filter_by: '')
     limit ||= items.count
 
     render partial: 'partials/skill_badges', locals: {color: color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}

@@ -3,7 +3,7 @@
     <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
       About Us
     </h2>
-    <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
+    <!--<p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
       Launched in May 2020 by a group of <%= CITY_NAME %> residents in response
       to local nonprofits’ increased need for volunteers as they build up capacity
       to support the community during COVID-19 and the ongoing economic crisis,
@@ -11,16 +11,24 @@
       efficiently recruit volunteers in the Greater <%= CITY_NAME %> area for in-person
       <u>and</u> remote opportunities.
     </p>
-    <!--<p class="mt-4 text-center text-sm leading-5 text-gray-600 max-w">
+    <p class="mt-4 text-center text-sm leading-5 text-gray-600 max-w">
       500+ volunteers with various skills from mask-making and grocery deliveries
       to social media management and computer programming skills have signed up,
       and 20+ nonprofits big and small have successfully found their volunteers
       here.
     </p> -->
+    <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
+      Launched in May 2020 by a Athens Mutual Aid Network in response
+      to local nonprofits’ increased need for volunteers as they build up capacity
+      to support the community during COVID-19 and the ongoing economic crisis,
+      <%= CITY_NAME %> Help With COVID is a partnership platform where nonprofits can
+      efficiently recruit volunteers in the Greater <%= CITY_NAME %> area for in-person
+      <u>and</u> remote opportunities.
+    </p>
     <p class="mt-4 text-center text-sm leading-5 text-gray-600 max-w">
       If you are a <%= CITY_NAME %> nonprofit interested in learning more about
       how our platform can best support you, contact us at
-      <%= mail_to 'athenshelpwithcovid@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %>.
+      <%= mail_to 'athenshelpwithcovid@gmail.com', nil, target: '_blank', class: 'text-red-500' %>.
       We send out regular newsletters to our volunteers about the latest opportunities,
       and our team is happy to provide custom support for your organization—from
       posting opportunities and collecting applications to targeted recruiting.
@@ -29,13 +37,13 @@
       We believe good tools should be shared. In fact, <%= DOMAIN_NAME %> was made possible by our friends
       at NewHavenHelpWithCovid.com. If you are currently outside of <%= CITY_NAME %> and think that your
       local community could use a partnership platform like ours, reach out to us at
-      <%= mail_to 'athenshelpwithcovid@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %> or
-      our affiliates at <%= mail_to 'newhavenpandemic@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %>.
+      <%= mail_to 'athenshelpwithcovid@gmail.com', nil, target: '_blank', class: 'text-red-500' %> or
+      our affiliates at <%= mail_to 'newhavenpandemic@gmail.com', nil, target: '_blank', class: 'text-red-500' %>.
       We are happy to discuss about sharing code and best practices.
     </p>
     <p class="mt-4 mb-4 text-center text-sm leading-5 text-gray-600 max-w">
       Credits to
-      <%= link_to 'HelpWithCovid.com', 'https://helpwithcovid.com/', target: '_blank', class: 'text-indigo-500' %>
+      <%= link_to 'HelpWithCovid.com', 'https://helpwithcovid.com/', target: '_blank', class: 'text-red-500' %>
       for the general template for this website.
     </p>
   </div>
@@ -55,17 +63,17 @@
                 Team Lead
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                <%= mail_to 'mutualaidathens@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %>
+                <%= mail_to 'mutualaidathens@gmail.com', nil, target: '_blank', class: 'text-red-500' %>
               </td>
             </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-indigo-500">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-red-700">
 
               </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-indigo-500">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-red-700">
                 Web Development Unit
               </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-indigo-500">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-red-700">
 
               </td>
             </tr>
@@ -77,7 +85,7 @@
                 Lead Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'camdenrogers24@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %>
+              <%= mail_to 'camdenrogers24@gmail.com', nil, target: '_blank', class: 'text-red-500' %>
               </td>
             </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
@@ -88,7 +96,7 @@
                 Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'brandonwischmeier@gmail.com', nil, target: '_blank', class: 'text-indigo-500' %>
+              <%= mail_to 'brandonwischmeier@gmail.com', nil, target: '_blank', class: 'text-red-500' %>
               </td>
             </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
@@ -99,7 +107,7 @@
                 Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'cas76700@uga.edu', nil, target: '_blank', class: 'text-indigo-500' %>
+              <%= mail_to 'cas76700@uga.edu', nil, target: '_blank', class: 'text-red-500' %>
               </td>
             </tr>
           </tbody>
