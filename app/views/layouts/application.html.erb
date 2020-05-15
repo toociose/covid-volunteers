@@ -19,6 +19,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen h-full bg-gray-100">
+
 <div class="flex-1 bg-gray-100">
   <%= render partial: 'layouts/nav' %>
 
@@ -39,13 +40,14 @@
 
 <footer class="w-full border-t border-gray-200 px-5 py-5">
   <div class="text-center text-gray-500 text-sm">
-    <%= link_to "About Us", about_path, class: 'text-indigo-500' %>
-    | <%= link_to "Disclaimer", disclaimer_path, class: 'text-indigo-500' %>
-    | <%= link_to "Risks", risks_path, class: 'text-indigo-500' %>
-    | <%= link_to "Safety Training", training_path, class: 'text-indigo-500' %>
-    | <%= mail_to HWC_EMAIL, nil, target: '_blank', class: 'text-indigo-500' %>
+    <%= link_to "About Us", about_path, class: 'text-
+    -500' %>
+    | <%= link_to "Disclaimer", disclaimer_path, class: 'text-red-500' %>
+    | <%= link_to "Risks", risks_path, class: 'text-red-500' %>
+    | <%= link_to "Safety Training", training_path, class: 'text-red-500' %>
+    | <%= mail_to HWC_EMAIL, nil, target: '_blank', class: 'text-red-500' %>
     <br>
-    Visit <%= link_to 'HelpWithCovid.com', 'https://helpwithcovid.com/', target: '_blank', class: 'text-indigo-500' %>
+    Visit <%= link_to 'HelpWithCovid.com', 'https://helpwithcovid.com/', target: '_blank', class: 'text-red-500' %>
     for more COVID-19 volunteer opportunities beyond <%= CITY_NAME %>!
   </div>
   <% if Rails.env == 'production' %>
