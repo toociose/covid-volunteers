@@ -109,7 +109,7 @@
             <% else %>
               <%= link_to toggle_volunteer_project_path(@project), method: :post, data: { confirm: "Are you sure you want to volunteer? The hiring manager will be alerted." } do %>
                 <span class="ml-3 inline-flex rounded-md shadow-sm mt-4">
-                  <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline-red focus:border-red-700 active:bg-red-700">
+                  <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-600 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700">
                     <svg class="-ml-1 mr-2 h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
                     </svg>
@@ -169,10 +169,10 @@
           </p>
         </div>
         <div class="flex justify-between mt-3 text-sm leading-5">
-          <%= mail_to HWC_EMAIL, "Tell about it via email &rarr;".html_safe, subject: "[Highlight request] #{@project.name} ", encoding: "hex", target: "_blank", class: "font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline transition ease-in-out duration-150" %>
-          <%= link_to "javascript:void(0)", id: "disable_highlight_projects_alert", class: "font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline transition ease-in-out duration-150" do %>
+          <%= mail_to HWC_EMAIL, "Tell about it via email &rarr;".html_safe, subject: "[Highlight request] #{@project.name} ", encoding: "hex", target: "_blank", class:  'text-' + @primary_color + '-600 ' +  'hover:text-' + @primary_color + '-500 ' + "font-medium focus:outline-none focus:underline transition ease-in-out duration-150" %>
+          <!--<%= link_to "javascript:void(0)", id: "disable_highlight_projects_alert", class: 'text-' + @primary_color + '-600 ' +  'hover:text-' + @primary_color + '-500 ' + "font-medium focus:outline-none focus:underline transition ease-in-out duration-150" do %>
             Don't show this again
-          <% end %>
+          <% end %> -->
         </div>
       </div>
     </div>
@@ -183,7 +183,7 @@
       <% if !@project.visible %>
         <dl>
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:pt-5 sm:pb-2 mb-3">
-            <p class="text-red-500">
+            <p class="text-<%=PRIMARY_COLOR %>-500">
               --- REMOVED POSTING ---
             </p>
           </div>
@@ -414,7 +414,7 @@
       </h2>
       <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
         If you believe this is a mistake, please contact the project owner or email us
-        at <a href="mailto:newhavenpandemic@gmail.com" class="text-red-500">newhavenpandemic@gmail.com</a>.
+        at <a href="mailto:athenshelpwithcovid@gmail.com" class="text-red-500">athenshelpwithcovid@gmail.com</a>.
       </p>
     </div>
   </div>
