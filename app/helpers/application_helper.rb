@@ -1,6 +1,5 @@
 module ApplicationHelper
   def nav_link_active_class(variant = 'DESKTOP')
-    @primary_color = "#{PRIMARY_COLOR}"
     case variant
     when 'DESKTOP'
       'inline-flex items-center px-1 pt-1 border-b-2 border-' + @primary_color + '-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-' + @primary_color + '-700 transition duration-150 ease-in-out ml-8 text-center'
@@ -72,7 +71,7 @@ module ApplicationHelper
     base_class
   end
 
-  def filter_badge(label: nil, model: nil, filter_by: nil, color: nil, title: nil)
+  def filter_badge(label: nil, model: nil, filter_by: nil, color: @primary_color, title: nil)
     if model.present?
       query_string = build_query_string(toggle_filter(filter_by, label))
       url = "/#{model}"
@@ -138,7 +137,7 @@ module ApplicationHelper
   def skill_badges(items, limit: nil, color: @primary_color, title: '', model: '', filter_by: '')
     limit ||= items.count
 
-    render partial: 'partials/skill_badges', locals: {color: color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}
+    render partial: 'partials/skill_badges', locals: {color: @primary_color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}
   end
 
   def sort_drop_down(&block)
