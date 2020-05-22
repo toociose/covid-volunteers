@@ -4,5 +4,5 @@
   <%= filter_badge label: type, color: color, model: model, filter_by: filter_by %>
 <% end %>
 <% if hidden.present? %>
-  <%= filter_badge label: "and #{hidden.size} more", color: 'gray', title: hidden.join(", ") %>
+  <%= filter_badge label: "and #{hidden.size} more", color: @primary_color, title: hidden.join(", ") %>
 <% end %>
