@@ -44,7 +44,7 @@
     | <%= link_to "Disclaimer", disclaimer_path, class: 'text-' + @primary_color + '-500' %>
     | <%= link_to "Risks", risks_path, class: 'text-' + @primary_color + '-500' %>
     | <%= link_to "Safety Training", training_path, class: 'text-' + @primary_color + '-500' %>
-    | <%= mail_to HWC_EMAIL, nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
+    | <%= mail_to AFFILIATE_EMAIL, nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
     <br>
     Visit <%= link_to 'HelpWithCovid.com', 'https://helpwithcovid.com/', target: '_blank', class: 'text-' + @primary_color + '-500'%>
     for more COVID-19 volunteer opportunities beyond <%= CITY_NAME %>!

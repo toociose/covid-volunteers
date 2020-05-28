@@ -36,6 +36,11 @@ ALL_LOCATIONS = [ "#{CITY_NAME} (on site)", "Other #{STATE_NAME} locales (on sit
 DOMAIN_NAME = 'AthensHelpWithCovid.com'
 AFFILIATE_EMAIL = 'athenshelpwithcovid@gmail.com'
 PRIMARY_COLOR = 'red'
+PROJECTS_SUBHEADER = "This is a #{CITY_NAME}-wide partnership platform, where #{CITY_NAME} residents can volunteer (in-person or remotely) and local non-profits and government can post volunteer needs. Let us unite and fight the pandemic together!"
+INSTAGRAM_LINK = 'https://www.instagram.com/athensmutualaid.net_updates/?hl=en'
+FACEBOOK_LINK = ''
+TWITTER_LINK = 'https://twitter.com/AthensAid'
+NEWSLETTER_LINK = 'http://eepurl.com/g3hEa5'
 ALL_PROJECT_TYPES = [
   'Contact tracing',
   'Reduce spread',
