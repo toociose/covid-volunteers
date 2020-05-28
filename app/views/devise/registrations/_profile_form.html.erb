@@ -1,9 +1,9 @@
 <div class="relative flex items-start">
     <div class="absolute flex items-center h-5">
-        <%= f.check_box "visibility", class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5" %>
+        <%= f.check_box "visibility", class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out5" %>
     </div>
     <div class="pl-7 text-sm leading-5">
-        <%= f.label 'visibility', 'Visibility', class: 'font-medium text-red-700' %>
+        <%= f.label 'visibility', 'Visibility', class:'text-' + @primary_color + '-700 ' + 'font-medium' %>
         <p class="text-gray-500">I want my information (including my email) to be visible in the directory of volunteers. Any registered user can see this directory.</p>
     </div>
 </div>
@@ -11,10 +11,10 @@
 <%# Subscribe to mailchimp %>
 <div class="relative flex items-start mt-6">
     <div class="absolute flex items-center h-5">
-        <%= f.check_box "newsletter_consent", class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5" %>
+        <%= f.check_box "newsletter_consent", class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out5" %>
     </div>
     <div class="pl-7 text-sm leading-5">
-        <%= f.label 'newsletter_consent', 'Newsletter', class: 'font-medium text-red-700' %>
+        <%= f.label 'newsletter_consent', 'Newsletter', class: 'text-' + @primary_color + '-700 ' + 'font-medium' %>
         <p class="text-gray-500">I consent to receiving emails about the latest volunteer openings.</p>
     </div>
 </div>
@@ -25,17 +25,18 @@
         <button type="button" class="text-sm text-gray-500 hover:text-gray-800 hover:underline" id='what_is_this'>What is this?</button>
         <div id="modal" class="modal">
             <!-- Modal content -->
+
             <div class="modal-content border-b border-gray-200 sm:rounded-lg">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-lg leading-6 font-medium text-gray-900">
                         What does Training Status mean?</h3>
                     <span class="close">&times;</span>
                 </div>
-                <p class="mb-4">NewHavenHelpWithCovid.com has partnered with the training platform Blank Slate to provide a simple way for volunteers to quickly get up to speed on how to have the highest impact possible in your work, especially in light of frequently changing guidelines and best practices connected to COVID-19.</p>
-                <p class="mb-4">To protect our volunteers and others you work with during this pandemic, we ask all our volunteers who’ve marked their current location as “on-site in <%= CITY_NAME %>” to use Blank Slate to receive training on City of <%= CITY_NAME %>’s latest volunteer safety guidelines, which will only take 2-3 minutes. After that, depending on what you need to learn for your volunteer work, Blank Slate will send one nudge per week to make sure these updates stay front of mind. Your training status will be indicated on your volunteer profile with a green check mark so that our local partners can recruit with peace of mind.</p>
-                <p class="mb-4">Please use <%= link_to "this link", "https://app.blankslatetechnologies.com/app/index.html#/signUp?app=covid19", class: 'text-indigo-500', target: :_blank %> to sign up for a free Blank Slate account using the same email address you used for NewHavenHelpWithCovid.com.</p>
-                <p class="mb-4">If you have any questions or encounter any issues, please contact <a href="mailto:newhavenpandemic@gmail.com" class="text-indigo-500">newhavenpandemic@gmail.com</a>.</p>
-                <p>Your privacy is of the utmost importance to NewHavenHelpWithCovid, and our relationship with Blank Slate is predicated on maintaining that privacy. Please be assured that your information belongs to you and will never be sold to third parties.</p>
+                <p class="mb-4"><%= DOMAIN_NAME %> has partnered with the training platform Blank Slate to provide a simple way for volunteers to quickly get up to speed on how to have the highest impact possible in your work, especially in light of frequently changing guidelines and best practices connected to COVID-19.</p>
+                <p class="mb-4">To protect our volunteers and others you work with during this pandemic, we ask all our volunteers who’ve marked their current location as “on-site in <%= CITY_NAME %>” to use Blank Slate to receive training on City of <%= CITY_NAME %>’ latest volunteer safety guidelines, which will only take 2-3 minutes. After that, depending on what you need to learn for your volunteer work, Blank Slate will send one nudge per week to make sure these updates stay front of mind. Your training status will be indicated on your volunteer profile with a green check mark so that our local partners can recruit with peace of mind.</p>
+                <p class="mb-4">Please use <%= link_to "this link", "https://app.blankslatetechnologies.com/app/index.html#/signUp?app=covid19", class: 'text-' + @primary_color + '-500', target: :_blank %> to sign up for a free Blank Slate account using the same email address you used for <%= DOMAIN_NAME %>.</p>
+                <p class="mb-4">If you have any questions or encounter any issues, please contact <a href="mailto:newhavenpandemic@gmail.com" class="text-<%=PRIMARY_COLOR %>-500"><%= AFFILIATE_EMAIL %></a>.</p>
+                <p>Your privacy is of the utmost importance to <%= DOMAIN_NAME %>, and our relationship with Blank Slate is predicated on maintaining that privacy. Please be assured that your information belongs to you and will never be sold to third parties.</p>
             </div>
         </div>
 
@@ -47,10 +48,9 @@
         <%= image_tag('ex-mark.svg', :size => "30x20") %>
         <% end %>
         <p class="mt-4 text-sm text-gray-500">To protect our volunteers and others you work with during this pandemic, we ask all our volunteers who’ve marked their current location as “on-site in <%= CITY_NAME %>” to receive training on the City of <%= CITY_NAME %>’s latest volunteer safety guidelines using the free learning app Blank Slate, which will only take 2-3 minutes. After you've done so, your training status will have a green check mark.</p>
-        <p class="mt-2 text-sm text-gray-500">Please use <%= link_to "this link", "https://app.blankslatetechnologies.com/app/index.html#/signUp?app=covid19", class: 'text-indigo-500', target: :_blank %> to sign up for a free Blank Slate account using the same email address you used for this platform.</p>
+        <p class="mt-2 text-sm text-gray-500">Please use <%= link_to "this link", "https://app.blankslatetechnologies.com/app/index.html#/signUp?app=covid19", class: 'text-' + @primary_color + '-500', target: :_blank %> to sign up for a free Blank Slate account using the same email address you used for this platform.</p>
     </dd>
 </div>
-
 
 <div class="mt-6 sm:mt-5">
     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -78,9 +78,9 @@
         <div></div>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
             <% if @user.age_consent? %>
-            <%= f.check_box :age_consent, class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5", required: true, disabled: true %>
+            <%= f.check_box :age_consent, class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out5", required: true, disabled: true %>
             <% else %>
-            <%= f.check_box :age_consent, class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5", required: true %>
+            <%= f.check_box :age_consent, class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out5", required: true %>
             <% end %>
             <label for="age_consent" class="font-medium text-gray-700 pl-2 text-sm leading-5">
                 <%= render "devise/shared/required", text: 'I am 18 years or older.' %>
@@ -106,7 +106,7 @@
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
             <div class="max-w-lg flex rounded-md shadow-sm">
-                <%= f.text_field "affiliation", placeholder: "Yale College, Yale School of Management, none, etc.", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
+                <%= f.text_field "affiliation", placeholder: "University of Georgia, Terry College of Business, none, etc.", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
                             <% ALL_SKILLS.each do |skill| %>
                             <div class="relative flex items-start">
                                 <div class="absolute flex items-center h-5">
-                                    <%= f.check_box :skill_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"}, skill, nil %>
+                                    <%= f.check_box :skill_list, { multiple: true, class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out"}, skill, nil %>
                                 </div>
                                 <div class="pl-7 text-sm leading-5">
                                     <label for="user_skill_list_<%= skill.downcase.gsub(' & ', '__').gsub(' ', '_') %>" class="font-medium text-gray-700">
@@ -154,7 +154,7 @@
                                 <% ALL_AVAILABILITY.each do |availability| %>
                                 <div class="relative flex items-start">
                                     <div class="absolute flex items-center h-5">
-                                        <%= f.radio_button :level_of_availability, availability, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"} %>
+                                        <%= f.radio_button :level_of_availability, availability, { :multiple => false, class: 'text-' + @primary_color + '-600 ' + "form-radio h-4 w-4 transition duration-150 ease-in-out"} %>
                                     </div>
                                     <div class="pl-7 text-sm leading-5">
                                         <label class="font-medium text-gray-700">
@@ -207,7 +207,7 @@
                                     <% ALL_LOCATIONS.each do |loc| %>
                                     <div class="relative flex items-start">
                                         <div class="absolute flex items-center h-5">
-                                            <%= f.radio_button :location, loc, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out", required: true} %>
+                                            <%= f.radio_button :location, loc, { :multiple => false, class: 'text-' + @primary_color + '-600 ' + "form-radio h-4 w-4 transition duration-150 ease-in-out", required: true} %>
                                         </div>
                                         <div class="pl-7 text-sm leading-5">
                                             <label class="font-medium text-gray-700">
@@ -239,7 +239,7 @@
                                     <div class="max-w-lg">
                                         <div class="relative flex items-start">
                                             <div class="absolute flex items-center h-5">
-                                                <%= f.check_box "pair_with_projects", class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5" %>
+                                                <%= f.check_box "pair_with_projects", class: 'text-' + @primary_color + '-600 ' + "form-checkbox h-4 w-4 transition duration-150 ease-in-out5" %>
                                             </div>
                                             <div class="pl-7 text-sm leading-5">
                                                 <%= f.label 'pair_with_projects', 'Pair me with volunteer positions', class: 'font-medium text-gray-700' %>

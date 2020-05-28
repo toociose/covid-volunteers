@@ -58,7 +58,7 @@ class User < ApplicationRecord
       csv << attributes
 
       all.find_each do |user|
-        csv << attributes.map{ |attr| user.send(attr) }
+        csv << attributes.map { |attr| user.send(attr) }
       end
     end
   end
@@ -71,22 +71,22 @@ class User < ApplicationRecord
   def subscribe_to_mailchimp(action = true)
     gibbon = Gibbon::Request.new
     gibbon.timeout = 15
-    list_id = "97d3425a6c"
+    list_id = "ba7ec53410"
 
     response = gibbon.lists(list_id).members(Digest::MD5.hexdigest(self.email)).upsert(body: {
-        email_address: self.email, 
-        status: action ? "subscribed" : "unsubscribed", 
+        email_address: self.email,
+        status: action ? "subscribed" : "unsubscribed",
     })
-  
+
     response
   end
 
   # this function checks the newsletter_consent field in before_save
   def check_newsletter_consent
     if self.newsletter_consent
-        subscribe_to_mailchimp(true)
-    else 
-        subscribe_to_mailchimp(false)
+      subscribe_to_mailchimp(true)
+    else
+      subscribe_to_mailchimp(false)
     end
   end
 
@@ -103,11 +103,11 @@ class User < ApplicationRecord
     request.basic_auth(BLANK_SLATE_USERNAME, BLANK_SLATE_PASSWORD)
     request.content_type = "application/json"
     request.body = JSON.dump({
-      "email" => self.email
-    })
+                                 "email" => self.email
+                             })
 
     req_options = {
-      use_ssl: uri.scheme == "https",
+        use_ssl: uri.scheme == "https",
     }
 
     response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
@@ -126,7 +126,7 @@ class User < ApplicationRecord
     return self.age_consent
   end
 
-  # before saving, we check if the user opted in or out, 
+  # before saving, we check if the user opted in or out,
   # if so they will be subscribed or unsubscribed
   # TODO: prevent unnecessary requests to mailchimp by checking the previous state
   before_update :check_newsletter_consent
