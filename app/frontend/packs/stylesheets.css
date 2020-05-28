@@ -21,6 +21,12 @@
 
 /* Set a specific color for each brand */
 
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
 /* Twitter */
 .fa-twitter {
   background: #55ACEE;
