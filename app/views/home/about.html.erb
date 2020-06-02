@@ -4,7 +4,7 @@
       About Us
     </h2>
     <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
-      Launched in May 2020 by <a href="https://www.athensmutualaid.net/" class="text-<%=PRIMARY_COLOR %>-500">Athens Mutual Aid Network</a> in response
+      Launched in May 2020 by a group of University of Georgia Students in response
       to local nonprofits’ increased need for volunteers as they build up capacity
       to support the community during COVID-19 and the ongoing economic crisis,
       <%= CITY_NAME %> Help With COVID is a partnership platform where nonprofits can
@@ -40,27 +40,24 @@
         <table class="min-w-full">
           <tbody>
             <% striped_classes_cycle = [ "bg-white", "bg-gray-50" ] %>
-
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
+                Management Team
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+              </td>
+            </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
                 Alden DiCamillo
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Team Lead
+                Community Partnership Manager
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                <%= mail_to 'mutualaidathens@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
-                Web Development Unit
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-
+                <%= mail_to 'annemarie.dicamillo@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
               </td>
             </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
@@ -68,10 +65,21 @@
                 Camden Rogers
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Lead Developer
+                Platform Manager, Lead Web Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'camdenrogers24@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
+                <%= mail_to 'camdenrogers24@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
+                Web Development Team
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+
               </td>
             </tr>
             <tr class="<%= cycle striped_classes_cycle %>">
@@ -79,7 +87,7 @@
                 Brandon Wischmeier
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Developer
+                Deputy Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
               <%= mail_to 'brandonwischmeier@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
@@ -90,10 +98,30 @@
                 Clayton Seals
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Developer
+                Deputy Developer
               </td>
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
               <%= mail_to 'cas76700@uga.edu', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
+                Communications Team
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+              </td>
+            </tr>
+            <tr class="<%= cycle striped_classes_cycle %>">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
+                Sofi Rice
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
+                Communications Lead
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
+                <%= mail_to 'sofi.rice97@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
               </td>
             </tr>
           </tbody>
