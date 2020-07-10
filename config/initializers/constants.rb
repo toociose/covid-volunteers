@@ -2,6 +2,7 @@ ALL_SKILLS = [
   'Access to car',
   'ArcGIS',
   'Arts and crafts',
+  'Graphic design',
   'BHL (biohazard level) lab certificate',
   'Childcare',
   'Communications',
@@ -58,6 +59,7 @@ ALL_PROJECT_TYPES = [
   'Communications',
   'Legal',
   'Policy',
+  'Graphic design',
   'Help out community',
   'Data gathering',
   'Other'
