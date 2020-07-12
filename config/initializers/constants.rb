@@ -30,12 +30,12 @@ ALL_NUMBER_OF_VOLUNTEERS = [ '1-10', '10-50', '50-100', '100+' ]
 ALL_LEVELS_OF_URGENCY = [ 'Extremely urgent', 'Very urgent', 'Moderately urgent', 'Somewhat urgent', 'Not urgent' ]
 ALL_LEVELS_OF_EXPOSURE = [ 'I', 'II', 'III', 'IV', 'V' ]
 REMOTE_LOCATION = 'Remote'
-CITY_NAME = 'Athens'
-STATE_NAME = 'Georgia'
+CITY_NAME = 'City'
+STATE_NAME = 'State'
 ALL_LOCATIONS = [ "#{CITY_NAME} (on site)", "Other #{STATE_NAME} locales (on site)", REMOTE_LOCATION ]
-DOMAIN_NAME = 'AthensHelpWithCovid.com'
-AFFILIATE_EMAIL = 'athenshelpwithcovid@gmail.com'
-PRIMARY_COLOR = 'red'
+DOMAIN_NAME = 'CityHelpWithCovid.com'
+AFFILIATE_EMAIL = 'cityhelpwithcovid@gmail.com'
+PRIMARY_COLOR = 'black'
 PROJECTS_SUBHEADER = "This is a #{CITY_NAME}-wide partnership platform, where #{CITY_NAME} residents can volunteer (in-person or remotely) and local non-profits and government can post volunteer needs. Let us unite and fight the pandemic together!"
 INSTAGRAM_LINK = 'https://www.instagram.com/athensmutualaid.net_updates/?hl=en'
 FACEBOOK_LINK = 'https://www.facebook.com/New-Haven-Help-with-Covid-19-100919271572189'
