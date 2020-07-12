@@ -35,7 +35,7 @@ STATE_NAME = 'State'
 ALL_LOCATIONS = [ "#{CITY_NAME} (on site)", "Other #{STATE_NAME} locales (on site)", REMOTE_LOCATION ]
 DOMAIN_NAME = 'CityHelpWithCovid.com'
 AFFILIATE_EMAIL = 'cityhelpwithcovid@gmail.com'
-PRIMARY_COLOR = 'black'
+PRIMARY_COLOR = 'red'
 PROJECTS_SUBHEADER = "This is a #{CITY_NAME}-wide partnership platform, where #{CITY_NAME} residents can volunteer (in-person or remotely) and local non-profits and government can post volunteer needs. Let us unite and fight the pandemic together!"
 INSTAGRAM_LINK = 'https://www.instagram.com/athensmutualaid.net_updates/?hl=en'
 FACEBOOK_LINK = 'https://www.facebook.com/New-Haven-Help-with-Covid-19-100919271572189'
