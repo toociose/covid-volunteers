@@ -3,7 +3,7 @@ class ProjectMailer < ApplicationMailer
     @project = params[:project]
     @user = params[:user]
 
-    mail(to: @project.user.email, bcc: ADMINS, subject: "You got a new volunteer for #{@project.name}!")
+    mail(to: @project.user.email, bcc: 'camden@athenshelpwithcovid.com', subject: "You got a new volunteer for #{@project.name}!")
   end
 
   def new_project
