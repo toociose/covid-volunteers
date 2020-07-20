@@ -37,9 +37,17 @@ class HomeController < ApplicationController
 
     def relevant_projects(category)
       relevant_projects = projects_with_skills(category) + projects_with_locations(category)
+      if category[:project_types].include? "(on site)"
+        relevant_projects.filter! { |proj| not proj.skill_list.include? "Access to car" }
+      end
       relevant_projects = relevant_projects.sort_by { |project|
         project.highlight ? 0: 1 } # show highlighted projects first
       relevant_projects
+    end
+
+    def relevant_projects_count(category)
+      relevant_projects = projects_with_skills(category) + projects_with_locations(category)
+      relevant_projects.count
     end
 
     def hydrate_project_categories
@@ -50,7 +58,7 @@ class HomeController < ApplicationController
           relevant_projects(category).take 3
         }
         category[:projects_count] = Rails.cache.fetch("project_category_#{category[:slug]}_projects_count", expires_in: 1.hour) {
-          relevant_projects(category).count
+          relevant_projects_count(category)
         }
       end
     end
