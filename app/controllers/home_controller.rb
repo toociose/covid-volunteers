@@ -24,15 +24,16 @@ class HomeController < ApplicationController
 
   private
     def projects_with_skills(category)
-      Project.find_each.filter { |proj| !(proj.skill_list & category[:project_types]).empty? }
+      Project.find_each.filter { |proj| proj.visible and !(proj.skill_list & category[:project_types]).empty? }
     end
 
     def projects_with_locations(category)
       if category[:project_types].length == 1
-        Project.where('location LIKE ?', '%' + category[:project_types][0] + '%')
+        projects = Project.where('location LIKE ?', '%' + category[:project_types][0] + '%')
       else
-        Project.where(location: category[:project_types])
+        projects = Project.where(location: category[:project_types])
       end
+      projects.filter { |proj| proj.visible }
     end
 
     def relevant_projects(category)
