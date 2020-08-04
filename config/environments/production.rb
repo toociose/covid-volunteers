@@ -22,7 +22,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   #config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  
+
    #TODO dont do this
   config.serve_static_assets = true
 
@@ -92,7 +92,7 @@ Rails.application.configure do
   #  enable_starttls_auto: true
   #}
 
-  config.action_mailer.default_url_options = { :host => 'newhavenhelpwithcovid.com', protocol: 'http' }
+  config.action_mailer.default_url_options = { :host => 'athenshelpwithcovid.com', protocol: 'http' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

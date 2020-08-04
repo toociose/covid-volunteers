@@ -8,7 +8,7 @@ class ProjectMailer < ApplicationMailer
 
   def new_project
     @project = params[:project]
-    mail(to: @project.user.email, bcc: ADMINS, subject: "You created a new position: #{@project.name}!")
+    mail(to: @project.user.email, bcc: [ADMINS, 'sofi.rice97@gmail.com'], subject: "You created a new position: #{@project.name}!")
   end
 
   def volunteer_outreach
