@@ -1,5 +1,5 @@
 <!-- Hero -->
-<div class="bg-white -mt-10 pt-24 ">
+<div class="bg-white -mt-10 pt-24">
   <div class="container mb-4 text-center mb-24">
     <h1 class="text-4xl font-bold tracking-tight leading-tight">
       <%= @projects_header %>
@@ -17,7 +17,7 @@
       <div class="font-bold text-lg">For volunteers</div>
       <div class="mt-1">
         <%= link_to projects_path do %>
-          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700" style="font-size: larger">
+          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-600 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
             See all <%= @project_count_total %> projects
           </button>
         <% end %>
@@ -27,7 +27,7 @@
       <div class="font-bold text-lg">For organizations</div>
       <div class="mt-1">
         <%= link_to new_project_path do %>
-          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700" style="font-size: larger">
+          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-600 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
             Create volunteer position
           </button>
         <% end %>

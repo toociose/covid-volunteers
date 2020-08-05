@@ -7,7 +7,7 @@ project_categories:
     color: purple
   - name: Driving
     slug: driving
-    body: Volunteer positions that require access to a car. 
+    body: Volunteer positions that require access to a car.
     project_types:
       - Access to car
     color: orange

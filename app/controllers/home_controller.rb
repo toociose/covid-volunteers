@@ -19,7 +19,7 @@ class HomeController < ApplicationController
     @featured_projects = Project.where(visible: true, highlight: true).includes(:project_types, :skills, :volunteers).limit(3).order('RANDOM()')
 
     @projects_header = "#{CITY_NAME} Residents vs. COVID-19"
-    @projects_subheader = "This is a #{CITY_NAME}-wide partnership platform, where #{CITY_NAME} residents can volunteer (in-person or remotely) and local non-profits and government can post volunteer needs. Let us unite and fight the pandemic together!"
+    @projects_subheader = "This is a #{CITY_NAME}-wide partnership platform, where students and #{CITY_NAME} residents can volunteer (in-person or remotely), and local non-profits and community service organizations can post their volunteer needs. Let us unite and fight the pandemic together!"
   end
 
   private
