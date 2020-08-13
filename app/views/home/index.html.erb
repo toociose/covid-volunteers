@@ -1,1 +1,67 @@
-Hey There!
+<!-- Hero -->
+<div class="bg-gray-300 w-screen h-64">
+  <div class="bg-center bg-no-repeat bg-contain w-screen h-full" style="background-image: url('<%= asset_path('/images/athens-help.png') %>')"></div>
+</div>
+  <div class="text-center py-6">
+    <h1 class="text-2xl md:text-4xl font-bold tracking-tight leading-tight">
+      <%= @projects_header %>
+    </h1>
+    <h2 class="text-base md:text-2xl mt-2 px-5 md:px-64">
+      <%= @projects_subheader %>
+    </h2>
+  </div>
+</div>
+
+<div class="relative grid grid-cols-3">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div></div>
+  <div>
+    <div class="flex justify-center">
+      <a href=<%=FACEBOOK_LINK %>"" class="fa fa-facebook" target="_blank"></a>
+      <a href=<%=INSTAGRAM_LINK %>"" class="fa fa-instagram fa-lg" target="_blank"></a>
+      <a href=<%=TWITTER_LINK %>"" class="fa fa-twitter" target="_blank"></a>
+    </div>
+  </div>
+  <div></div>
+</div>
+
+<!-- Featured projects -->
+<div class="container text-center mt-12 mb-24">
+  <div class="relative grid grid-cols-1 md:grid-cols-2 gap-0 text-sm">
+    <div>
+      <img class="w-40 md:w-64 relative inline-flex items-center" src="/images/volunteers.png">
+      <div class="font-bold text-lg md:text-2xl">For Volunteers</div>
+      <div class="text-md md:text-lg md:px-20">Browse volunteer opportunities in <%=CITY_NAME %>. Currently there are <%= @project_count_total %> remote and in-person opportunities where you might be able to help!</div>
+      <div class="mt-4">
+        <%= link_to projects_path do %>
+          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-700 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
+            View All <%= @project_count_total %> Projects
+          </button>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <img class="w-40 md:w-64 relative inline-flex items-center" src="/images/organizations.png">
+      <div class="font-bold text-lg md:text-2xl">For Organizations</div>
+      <div class="text-md md:text-lg md:px-20">Whether it involves coding or delivering meals, our site has <%= User.count %> student volunteers and counting that can help meet your needs. </div>
+      <div class="mt-4">
+        <%= link_to new_project_path do %>
+          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-700 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
+            Create Volunteer Position
+          </button>
+        <% end %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project categories -->
+<div class="container">
+  <div class="text-center text-2xl md:text-4xl my-10 font-bold">
+    Volunteer Opportunities
+  </div>
+  <% cache @project_categories do %>
+    <%= render partial: 'project-category', collection: @project_categories, as: :category %>
+  <% end %>
+</div>

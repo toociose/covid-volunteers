@@ -1,19 +1,24 @@
 module ApplicationHelper
+  def section_name(name = '')
+    "<div class='text-2xl font-bold'>#{name}</div>".html_safe
+  end
+
+
   def nav_link_active_class(variant = 'DESKTOP')
     case variant
     when 'DESKTOP'
-      'inline-flex items-center px-1 pt-1 border-b-2 border-' + @primary_color + '-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-' + @primary_color + '-700 transition duration-150 ease-in-out ml-8 text-center'
+      'border-' + @primary_color + '-500 ' + 'focus:border-' + @primary_color + '-700 ' + 'inline-flex items-center px-1 pt-1 border-b-2 text-sm leading-5 text-gray-900 focus:outline-none transition duration-150 ease-in-out ml-4 text-center'
     when 'MOBILE'
-      'block pl-3 pr-4 py-2 border-l-4 border-' + @primary_color + '-500 text-base font-medium text-' + @primary_color + '-700 bg-' + @primary_color + '-50 focus:outline-none focus:text-' + @primary_color + '-800 focus:bg-' + @primary_color + '-100 focus:border-' + @primary_color + '-700 transition duration-150 ease-in-out'
+      'border-' + @primary_color + '-500 ' + 'focus:border-' + @primary_color + '-700 ' + 'text-' + @primary_color + '-700 ' + 'bg-' + @primary_color + '-50 ' + 'focus:text-' + @primary_color + '-800 ' + 'focus:bg-' + @primary_color + '-100 ' + 'block pl-3 pr-4 py-2 border-l-4 text-base focus:outline-none transition duration-150 ease-in-out'
     end
   end
 
   def nav_link_inactive_class(variant = 'DESKTOP')
     case variant
     when 'DESKTOP'
-      'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out ml-8 text-center'
+      'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm leading-5 text-gray-600 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out ml-4 text-center'
     when 'MOBILE'
-      'mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out'
+      'mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out'
     end
   end
 
@@ -91,6 +96,7 @@ module ApplicationHelper
       classes += ' bg-blue-300' if applied
     end
 
+
     render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title}
   end
 
@@ -134,10 +140,10 @@ module ApplicationHelper
     params_array.reject(&:nil?).join('&')
   end
 
-  def skill_badges(items, limit: nil, color: @primary_color, title: '', model: '', filter_by: '')
+  def skill_badges(items, limit: nil, color: 'indigo', title: '', model: '', filter_by: '')
     limit ||= items.count
 
-    render partial: 'partials/skill_badges', locals: {color: @primary_color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}
+    render partial: 'partials/skill_badges', locals: {color: color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}
   end
 
   def sort_drop_down(&block)
@@ -164,5 +170,9 @@ module ApplicationHelper
     path = path + "?#{new_params.to_query}" if new_params.present?
 
     "<option value='#{path}' #{'selected' if active}>#{title}</option>".html_safe
+  end
+
+  def list_cards(&block)
+    "<div class='w-full px-4 sm:px-0 space-y-bottom-4 sm:grid grid-cols-2 lg:grid-cols-3 sm:gap-6 grid-auto-row-1fr'>#{capture(&block)}</div>".html_safe
   end
 end
