@@ -17,9 +17,8 @@ class HomeController < ApplicationController
     # Display the volunteers in increments of 100
     @volunteer_count = (@volunteer_count / 100).floor * 100
     @featured_projects = Project.where(visible: true, highlight: true).includes(:project_types, :skills, :volunteers).limit(3).order('RANDOM()')
-
-    @projects_header = "#{CITY_NAME} Residents vs. COVID-19"
-    @projects_subheader = "This is a #{CITY_NAME}-wide partnership platform, where students and #{CITY_NAME} residents can volunteer (in-person or remotely), and local non-profits and community service organizations can post their volunteer needs. Let us unite and fight the pandemic together!"
+    @projects_header = "#{CITY_NAME} vs. COVID-19"
+    @projects_subheader = "An #{CITY_NAME}-wide partnership platform where students can volunteer, and local non-profits and community service organizations can post their volunteer needs. Let's unite and fight the pandemic together!"
   end
 
   private

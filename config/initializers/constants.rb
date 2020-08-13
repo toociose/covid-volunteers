@@ -38,7 +38,7 @@ DOMAIN_NAME = 'ThisCityHelpWithCovid.com'
 AFFILIATE_EMAIL = 'info@thiscityhelpwithcovid.com'
 PRIMARY_COLOR = 'red'
 PROJECTS_SUBHEADER = "This is a #{CITY_NAME}-wide partnership platform, where #{CITY_NAME} residents can volunteer (in-person or remotely) and local non-profits and government can post volunteer needs. Let us unite and fight the pandemic together!"
-INSTAGRAM_LINK = 'https://www.instagram.com/athensmutualaid.net_updates/?hl=en'
+INSTAGRAM_LINK = 'https://www.instagram.com/athenshelpwithcovid/'
 FACEBOOK_LINK = 'https://www.facebook.com/Athens-help-With-Covid-19-103765018035330'
 TWITTER_LINK = 'https://twitter.com/AthGaHelpwCovid'
 NEWSLETTER_LINK = 'http://eepurl.com/g3hEa5'

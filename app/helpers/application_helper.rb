@@ -1,15 +1,15 @@
 module ApplicationHelper
   def section_name(name = '')
-    "<div class='text-lg font-bold'>#{name}</div>".html_safe
+    "<div class='text-2xl font-bold'>#{name}</div>".html_safe
   end
 
 
   def nav_link_active_class(variant = 'DESKTOP')
     case variant
     when 'DESKTOP'
-      'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out ml-4 text-center'
+      'border-' + @primary_color + '-500 ' + 'focus:border-' + @primary_color + '-700 ' + 'inline-flex items-center px-1 pt-1 border-b-2 text-sm leading-5 text-gray-900 focus:outline-none transition duration-150 ease-in-out ml-4 text-center'
     when 'MOBILE'
-      'block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out'
+      'border-' + @primary_color + '-500 ' + 'focus:border-' + @primary_color + '-700 ' + 'text-' + @primary_color + '-700 ' + 'bg-' + @primary_color + '-50 ' + 'focus:text-' + @primary_color + '-800 ' + 'focus:bg-' + @primary_color + '-100 ' + 'block pl-3 pr-4 py-2 border-l-4 text-base focus:outline-none transition duration-150 ease-in-out'
     end
   end
 
