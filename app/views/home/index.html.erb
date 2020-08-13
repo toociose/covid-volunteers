@@ -34,7 +34,7 @@
       <div class="text-md md:text-lg md:px-20">Browse volunteer opportunities in <%=CITY_NAME %>. Currently there are <%= @project_count_total %> remote and in-person opportunities where you might be able to help!</div>
       <div class="mt-4">
         <%= link_to projects_path do %>
-          <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-700 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
+          <button type="button" class="relative inline-flex items-center mb-8 px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-<%=PRIMARY_COLOR %>-700 hover:bg-<%=PRIMARY_COLOR %>-500 focus:outline-none focus:shadow-outline-<%=PRIMARY_COLOR %> focus:border-<%=PRIMARY_COLOR %>-700 active:bg-<%=PRIMARY_COLOR %>-700" style="font-size: larger">
             View All <%= @project_count_total %> Projects
           </button>
         <% end %>
