@@ -23,7 +23,7 @@ gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+
 gem 'kaminari'
 gem 'acts-as-taggable-on'
 
@@ -80,13 +80,13 @@ gem 'aws-sdk-rails'
 gem 'bootstrap-datepicker-rails'
 
 # Exceptions.
-gem 'exception_notification', git: 'https://github.com/smartinez87/exception_notification'
+gem 'exception_notification'
 
 #Search
 gem 'pg_search'
 
 # Email obfuscation
-gem 'actionview-encoded_mail_to', git: 'https://github.com/mirko314/actionview-encoded_mail_to', branch: 'feature/fix-vanilla-mail-to'
+gem 'actionview-encoded_mail_to'
 
 # Environment variables
 gem 'dotenv-rails'
