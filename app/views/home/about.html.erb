@@ -1,11 +1,12 @@
-<div class = "text-4xl text-center">
-  test 
-</div>
+<!--Section Header -->
+    <div class="bg-red-400 p-4 rounded-full">
+      <p class="font-sans text-2xl md:block block text-white text-center px-4 py-2">About Us</p>
+    </div>
 <div class="flex flex-col justify-center sm:px-6 lg:px-8">
   <div class="mx-auto w-full max-w-3xl">
-    <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+    <!-- <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
       About Us
-    </h2>
+    </h2> -->
     <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
       Launched in May 2020 by a group of University of Georgia Students in response
       to local nonprofits’ increased need for volunteers as they build up capacity
@@ -37,114 +38,72 @@
     </p>
   </div>
 
-  <div class="flex flex-col mt-8">
-    <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-      <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
-        <table class="min-w-full">
-          <tbody>
-            <% striped_classes_cycle = [ "bg-white", "bg-gray-50" ] %>
-            <tr>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
-                Management Team
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
-                Camden Rogers
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Platform Manager, Lead Web Developer
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                <%= mail_to 'camden@athenshelpwithcovid.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
+  <!--Section Header -->
+  <div class="bg-red-400 p-4 rounded-full">
+  <p class="font-sans text-2xl md:block block text-white text-center px-4 py-2">Our Team</p>
+</div>
+  
+  <!--Volunteer Grid -->
 
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
-                Web Development Team
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
-                Brandon Wischmeier
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Deputy Developer
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'brandonwischmeier@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
-                Clayton Seals
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Deputy Developer
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-              <%= mail_to 'cas76700@uga.edu', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
-                Communications Team
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
-                Sofi Rice
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Communications Lead
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                <%= mail_to 'sofi.rice97@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-white text-center bg-<%=PRIMARY_COLOR %>-700">
-                Community Support Team
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center bg-<%=PRIMARY_COLOR %>-700">
-              </td>
-            </tr>
-            <tr class="<%= cycle striped_classes_cycle %>">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
-                Alden DiCamillo
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                Community Partnership Manager
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
-                <%= mail_to 'annemarie.dicamillo@gmail.com', nil, target: '_blank', class: 'text-' + @primary_color + '-500' %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="container text-center mx-auto pt-8">
+  <div class="relative grid grid-cols-3 md:grid-cols-3 gap-x-40 gap-y-40 text-sm">
+  <!--vertical code to add to the outer div of each persons image is transform translate-x-16 -->
+  <div class=" flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center  ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Camden.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Camden Rogers</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Platform Manager, Lead Web Developer</div>
+   </div>
+    
+   <div class="flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Clayton.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Clayton A. Seals II</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Deputy Developer</div>
+   </div>
+   
+   
+    <div class="flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center  ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Clayton.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Clayton A. Seals II</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Deputy Developer</div>
+   </div>
+    
+    <div class="flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center  ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Clayton.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Clayton A. Seals II</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Deputy Developer</div>
     </div>
-  </div>
 
-  <div class="sm:mx-auto sm:w-full sm:max-w-lg">
-    <h2 class="mt-8 text-center text-3xl leading-9 font-extrabold text-gray-900">
+    <div class="flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center  ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Clayton.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Clayton A. Seals II</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Deputy Developer</div>
+    </div>
+
+    <div class="flex-grow rounded-full bg-no-repeat bg-center bg-red-400 w-80 h-80 items-center  ">
+      <img class="mt-10 rounded-full h-60 mt-6 w-60 md:w-64 relative inline-flex items-center bg-center bg-gray-400 " src="/images/Clayton.jpeg">
+      <div class=" font-bold text-lg md:text-2xl transform translate-y-12">Clayton A. Seals II</div>
+      <div class="text-md md:text-lg sm:px-1 transform translate-y-12">Deputy Developer</div>
+   </div>
+
+      <br> 
+
+  </div>  <!--grid -->
+  </div> <!--container -->
+
+  <!--Section Header -->
+  <div class="bg-red-400 p-4 rounded-full">
+  <p class="font-sans text-2xl md:block block text-white text-center px-4 py-2">Thank you to all volunteers!</p>
+</div>
+
+
+<!--Commented out old Thank you message below -->
+
+
+<!--<div class="sm:mx-auto sm:w-full sm:max-w-lg">
+    <h2 class="pb-15 mt-8 text-center text-3xl leading-9 font-extrabold text-gray-900">
       Thank you to all volunteers!
     </h2>
-  </div>
-</div>
+  </div> -->
+
+
+</div> <!--end of about page -->
